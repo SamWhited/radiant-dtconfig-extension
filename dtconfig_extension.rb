@@ -14,7 +14,7 @@ class DtconfigExtension < Radiant::Extension
 
   def activate
     # Set the types of meetings that the minutes extension should display
-    MinutesExtension.meeting_types = ['Club', 'EC', 'PPM', 'Open House', 'Banquet', 'Historian', 'Social', 'Other'] unless not defined? MinutesExtension
+    MinutesExtension.meeting_types = ['Club', 'EC', 'PPM', 'Open House', 'Banquet', 'Historian', 'Social', 'Production', 'Other'] unless not defined? MinutesExtension
 
     # Set the title of the admin interface
     Radiant::Config['admin.title'] = 'DramaTech Theat(er|re)' if Radiant::Config['admin.title'] =~ /Radiant CMS/
