@@ -13,6 +13,11 @@ class DtconfigExtension < Radiant::Extension
   end
 
   def activate
+    # Activate custom DramaTech radius tags
+    Page.class_eval do
+      include DramatechTags
+    end
+
     # Set the types of meetings that the minutes extension should display
     MinutesExtension.meeting_types = ['Club', 'EC', 'PPM', 'Open House', 'Banquet', 'Historian', 'Social', 'Production', 'Other'] unless not defined? MinutesExtension
 
