@@ -18,8 +18,14 @@ class DtconfigExtension < Radiant::Extension
       include DramatechTags
     end
 
-    # Set the types of meetings that the minutes extension should display
+    # Configure the minutes extension
     MinutesExtension.meeting_types = ['Club', 'EC', 'PPM', 'Open House', 'Banquet', 'Historian', 'Social', 'Production', 'Other'] unless not defined? MinutesExtension
+
+    # Configure the news extension
+    unless not defined? NewsExtension
+      NewsExtension.news_types = ['Public', 'Greenroom']
+      NewsExtension.news_paths = ['/news/', '/greenroom/news/']
+    end
 
     # Set the title of the admin interface
     Radiant::Config['admin.title'] = 'DramaTech Theat(er|re)' if Radiant::Config['admin.title'] =~ /Radiant CMS/
