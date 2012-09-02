@@ -20,7 +20,7 @@ class DtconfigExtension < Radiant::Extension
 
     # Configure the minutes extension
     unless not defined? MinutesExtension
-      MinutesExtension.minutes_path = '/greenroom/minutes/'
+      MinutesExtension.minutes_path = '/greenroom/documents/minutes/'
       MinutesExtension.meeting_types = ['Club', 'EC', 'PPM', 'Open House', 'Banquet', 'Historian', 'Social', 'Production', 'Other']
     end
 
