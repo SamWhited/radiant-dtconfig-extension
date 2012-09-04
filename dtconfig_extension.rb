@@ -24,12 +24,6 @@ class DtconfigExtension < Radiant::Extension
       MinutesExtension.meeting_types = ['Club', 'EC', 'PPM', 'Open House', 'Banquet', 'Historian', 'Social', 'Production', 'Other']
     end
 
-    # Configure the news extension
-    unless not defined? NewsExtension
-      NewsExtension.news_types = ['Public', 'Greenroom']
-      NewsExtension.news_paths = ['/news/', '/greenroom/news/']
-    end
-
     # Set the title of the admin interface
     Radiant::Config['admin.title'] = 'DramaTech Theat(er|re)' if Radiant::Config['admin.title'] =~ /Radiant CMS/
     Radiant::Config['admin.subtitle'] = 'Music, theater, toasters' if Radiant::Config['admin.subtitle'] =~ /Publishing for Small Teams/
