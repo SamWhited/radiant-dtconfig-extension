@@ -19,13 +19,13 @@ class DtconfigExtension < Radiant::Extension
     end
 
     # Configure the minutes extension
-    unless not defined? MinutesExtension
+    if defined? MinutesExtension
       MinutesExtension.minutes_path = '/greenroom/minutes/'
       MinutesExtension.meeting_types = ['Club', 'EC', 'PPM', 'Open House', 'Banquet', 'Historian', 'Social', 'Production', 'Post Mortem', 'Other']
     end
 
     # Configure the news extension
-    unless not defined? NewsExtension
+    if defined? NewsExtension
       NewsExtension.news_types = ['Public', 'Greenroom']
       NewsExtension.news_paths = ['/news/', '/greenroom/news/']
     end
